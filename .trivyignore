@@ -1,5 +1,0 @@
-# Risk accepted because it is not planned to download anything over HTTPS using CPAN.pm
-CVE-2023-31484
-
-# Risk accepted because the affected API is not used and not exposed
-CVE-2023-45853
