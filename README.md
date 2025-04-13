@@ -1,7 +1,7 @@
-# Chromosphere-example-app
+# talos-example-app
 Hosts source code for an example app. Also has a workflow that builds and pushes the image.
 
-This repository contains a GitHub Actions workflow that builds and pushes a Docker image to Amazon Elastic Container Registry (ECR). The workflow is triggered manually from the repository's Actions page and uses the sonnen/chromosphere-workflows/.github/workflows/ecr-image.yaml@v0.8.0 action to perform the build and push operation.
+This repository contains a GitHub Actions workflow that builds and pushes a Docker image to Amazon Elastic Container Registry (ECR). The workflow is triggered manually from the repository's Actions page and uses the sonnen/talos-workflows/.github/workflows/ecr-image.yaml@v0.8.0 action to perform the build and push operation.
 
 ## docker-ecr-image workflow
 
@@ -13,7 +13,7 @@ This workflow is triggered by a workflow dispatch event, meaning it can be manua
 
  **Job Configuration:**
 
-* `uses`:  Specifies the external action to be used for the job. In this case, it uses the action sonnen/chromosphere-workflows/.github/workflows/ecr-image.yaml@v0.8.0
+* `uses`:  Specifies the external action to be used for the job. In this case, it uses the action sonnen/talos-workflows/.github/workflows/ecr-image.yaml@v0.8.0
 
 * `aws_role_arn`: Provides the ARN of the IAM role that grants the workflow access to ECR, please change it accordingly.
 
@@ -25,7 +25,7 @@ This workflow is triggered by a workflow dispatch event, meaning it can be manua
 
 2. The "build" job is executed.
 
-3. The external action sonnen/chromosphere-workflows/.github/workflows/ecr-image.yaml@v0.8.0 is invoked.
+3. The external action sonnen/talos-workflows/.github/workflows/ecr-image.yaml@v0.8.0 is invoked.
 
 4. The action uses the provided inputs, including the AWS region, IAM role ARN, ECR repository name, Dockerfile name, and secrets, to build and push the Docker image to ECR.
 
